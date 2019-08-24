@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#block-b #container-images {
+  background: #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#block-b #container-images .images {
+  height: 200px;
+  width: 275px;
+  padding: 15px;
+}
+#block-b #container-images .tags {
+  content: attr(data-content);
+  color: yellow;
+}
+
+/*# sourceMappingURL=main.css.map */
