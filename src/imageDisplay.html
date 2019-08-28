@@ -9,9 +9,24 @@
   </head>
   <body>
     <section id="block-a">
-      <div id="container-detail"></div>
+      <div id="container-detail">
+        <div class="exif-data">
+          <h4>Model: <span id="modelhtml"></span></h4>
+          <h4>F-Stop: <span id="fstophtml"></span></h4>
+          <h4>Exposure: <span id="exposurehtml"></span></h4>
+          <h4>ISO: <span id="isohtml"></span></h4>
+          <br />
+          <br />
+          <ul class="resolution">
+            <li onclick="changeSize(3)">High</li>
+            <li onclick="changeSize(2)">Medium</li>
+            <li onclick="changeSize(1)">Small</li>
+          </ul>
+        </div>
+        <img src="" id="img1" class="med-img" />
+      </div>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="../dist/js/imageDetail.js"></script>
   </body>
 </html>

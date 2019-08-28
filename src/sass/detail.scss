@@ -6,11 +6,48 @@
 body {
   background: black;
 }
+
+// Varying Resolution changes
+.small-img {
+  width: 640px;
+  height: 360px;
+}
+
+.med-img {
+  width: 1280px;
+  height: 720;
+}
+
+.large-img {
+  width: 1440px;
+  height: 810px;
+}
 #block-a {
   #container-detail {
+    position: relative;
+    top: 50px;
+    display: flex;
+
+    .exif-data {
+      h4 {
+        padding: 2.5%;
+        color: rgb(255, 0, 234);
+
+        span {
+          color: #e5e5e5;
+        }
+      }
+
+      .resolution {
+        color: yellow;
+        li {
+          padding: 5%;
+          cursor: pointer;
+        }
+      }
+    }
     img {
-      width: 1280px;
-      height: 720px;
+      padding-left: 50px;
     }
   }
 }
