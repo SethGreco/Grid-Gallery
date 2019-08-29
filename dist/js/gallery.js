@@ -1,8 +1,8 @@
 // call Django API and fetch photos
 document.getElementById("container-images").addEventListener("load", gallery());
-
+var images;
 async function gallery() {
-  const images = await getPhotos();
+  images = await getPhotos();
 
   for (i = 0; i < images.length; i++) {
     // <div> that will container both image and name.
@@ -39,6 +39,15 @@ async function gallery() {
 //   document.getElementById(click_id).setAttribute("class", "main");
 //   console.log(window.location.href);
 // }
+
+function photoSort(state) {
+  var sortedArr = [];
+  for (i = 0; i < images.length; i++) {
+    if (state === images[i].location) {
+      console.log(images[i]);
+    }
+  }
+}
 
 function getPhotos() {
   return fetch("http://localhost:8000/api/images").then(results =>

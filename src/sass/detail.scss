@@ -11,13 +11,13 @@ body {
 
 // Varying Resolution changes / selectors
 .small-img {
-  width: 640px;
-  height: 360px;
+  width: 896px;
+  height: 504px;
 }
 
 .med-img {
-  width: 1280px;
-  height: 720px;
+  width: 1216px;
+  height: 684px;
 }
 
 .large-img {
@@ -38,48 +38,77 @@ body {
 }
 
 #detail-container {
-  .state-logo {
-    .lines {
-      height: 4px;
-      width: 10rem;
-      background-color: rgb(214, 121, 0);
-      display: block;
-      margin-left: 10%;
-    }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 8% 0 8%;
 
-    #state-name {
-      font-family: "Anton", sans-serif;
-      font-size: 3rem;
-      margin-left: 10%;
-      color: rgb(214, 121, 0);
-      margin-top: -5px;
-      margin-bottom: 2.5%;
-    }
-  }
-  .exif-data {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 5%;
-    h3 {
-      color: rgb(255, 0, 234);
+    .state-logo {
+      background-image: linear-gradient(
+        to right,
+        rgba(244, 245, 246, 0.767),
+        rgba(214, 121, 0, 0.178)
+      );
+      .lines {
+        height: 5px;
+        background-color: rgb(214, 121, 0);
+        width: 15rem;
+        display: block;
+      }
 
-      span {
-        font-size: 1.1rem;
-        color: #555;
+      #state-name {
+        font-family: "Anton", sans-serif;
+        font-size: 3rem;
+
+        color: rgb(214, 121, 0);
       }
     }
 
-    .resolution {
-      color: rgb(80, 114, 25);
-      list-style: none;
-      li {
-        padding: 5%;
-        cursor: pointer;
+    .res-list {
+      background-image: linear-gradient(
+        to right,
+        rgba(214, 121, 0, 0.178),
+        rgba(214, 121, 0, 0.616)
+      );
+
+      .resolution {
+        color: rgb(80, 114, 25);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li {
+          background-color: rgb(253, 255, 127);
+          margin: 20px 5px 0 5px;
+          cursor: pointer;
+          border: 1px solid #333;
+          width: 75px;
+          height: 1.5rem;
+          border-radius: 7px;
+          text-align: center;
+          padding-top: 5px;
+        }
       }
     }
-    a {
-      text-decoration: none;
-      font-size: 1.5rem;
+    .exif-data {
+      height: 5rem;
+      grid-column: 1 / span 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        color: rgb(255, 0, 234);
+        padding: 1rem;
+        span {
+          font-size: 1.1rem;
+          color: #555;
+        }
+      }
+
+      a {
+        padding: 1rem;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
     }
   }
 }

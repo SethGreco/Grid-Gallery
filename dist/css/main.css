@@ -21,6 +21,12 @@
 #navigation .container ul li {
   padding: 20px;
 }
+#navigation .container ul li ul {
+  display: none;
+}
+#navigation .container ul li:hover ul {
+  display: list-item;
+}
 
 #block-a .container {
   background: #000;

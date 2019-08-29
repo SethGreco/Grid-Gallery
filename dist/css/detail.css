@@ -8,13 +8,13 @@ body {
 }
 
 .small-img {
-  width: 640px;
-  height: 360px;
+  width: 896px;
+  height: 504px;
 }
 
 .med-img {
-  width: 1280px;
-  height: 720px;
+  width: 1216px;
+  height: 684px;
 }
 
 .large-img {
@@ -30,42 +30,62 @@ body {
   text-align: center;
 }
 
-#detail-container .state-logo .lines {
-  height: 4px;
-  width: 10rem;
-  background-color: #d67900;
-  display: block;
-  margin-left: 10%;
+#detail-container .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 8% 0 8%;
 }
-#detail-container .state-logo #state-name {
+#detail-container .container .state-logo {
+  background-image: linear-gradient(to right, rgba(244, 245, 246, 0.767), rgba(214, 121, 0, 0.178));
+}
+#detail-container .container .state-logo .lines {
+  height: 5px;
+  background-color: #d67900;
+  width: 15rem;
+  display: block;
+}
+#detail-container .container .state-logo #state-name {
   font-family: "Anton", sans-serif;
   font-size: 3rem;
-  margin-left: 10%;
   color: #d67900;
-  margin-top: -5px;
-  margin-bottom: 2.5%;
 }
-#detail-container .exif-data {
+#detail-container .container .res-list {
+  background-image: linear-gradient(to right, rgba(214, 121, 0, 0.178), rgba(214, 121, 0, 0.616));
+}
+#detail-container .container .res-list .resolution {
+  color: #507219;
+  list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 5%;
+  justify-content: center;
 }
-#detail-container .exif-data h3 {
+#detail-container .container .res-list .resolution li {
+  background-color: #fdff7f;
+  margin: 20px 5px 0 5px;
+  cursor: pointer;
+  border: 1px solid #333;
+  width: 75px;
+  height: 1.5rem;
+  border-radius: 7px;
+  text-align: center;
+  padding-top: 5px;
+}
+#detail-container .container .exif-data {
+  height: 5rem;
+  grid-column: 1/span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#detail-container .container .exif-data h3 {
   color: #ff00ea;
+  padding: 1rem;
 }
-#detail-container .exif-data h3 span {
+#detail-container .container .exif-data h3 span {
   font-size: 1.1rem;
   color: #555;
 }
-#detail-container .exif-data .resolution {
-  color: #507219;
-  list-style: none;
-}
-#detail-container .exif-data .resolution li {
-  padding: 5%;
-  cursor: pointer;
-}
-#detail-container .exif-data a {
+#detail-container .container .exif-data a {
+  padding: 1rem;
   text-decoration: none;
   font-size: 1.5rem;
 }
