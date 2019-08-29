@@ -6,7 +6,7 @@
 
 // Body of the entire page
 body {
-  background: rgba(9, 16, 78, 0.287);
+  background: rgba(244, 245, 246, 0.767);
 }
 
 // Varying Resolution changes / selectors
@@ -16,8 +16,8 @@ body {
 }
 
 .med-img {
-  width: 1024px;
-  height: 640px;
+  width: 1280px;
+  height: 720px;
 }
 
 .large-img {
@@ -27,59 +27,66 @@ body {
 
 // Main header of page
 #header {
-  height: 7.5vh;
-  background-color: #333;
+  height: 2vh;
 }
 
 // Block a container EXIF and Iamge .. left to right
 #block-a {
-  #container-detail {
-    display: flex;
-
-    .exif-data {
-      margin-left: 2.5%;
-      margin-right: 2.5%;
-      margin-top: 2.5%;
-      h3 {
-        padding: 2.5%;
-        color: rgb(255, 0, 234);
-
-        span {
-          font-size: 1.1rem;
-          color: #555;
-        }
-      }
-
-      .resolution {
-        color: rgb(80, 114, 25);
-        list-style: none;
-        li {
-          padding: 5%;
-          cursor: pointer;
-        }
-      }
-      a {
-        text-decoration: none;
-        font-size: 1.5rem;
-      }
-    }
-    .img-container {
-      margin-right: 2.5%;
-      width: 1070px;
-      height: 680px;
-      background: #d3d3d3c7;
-      text-align: center;
-      #img1 {
-        margin-top: 20px;
-      }
-    }
+  .img-container {
+    text-align: center;
   }
 }
 
+#detail-container {
+  .state-logo {
+    .lines {
+      height: 4px;
+      width: 10rem;
+      background-color: rgb(214, 121, 0);
+      display: block;
+      margin-left: 10%;
+    }
+
+    #state-name {
+      font-family: "Anton", sans-serif;
+      font-size: 3rem;
+      margin-left: 10%;
+      color: rgb(214, 121, 0);
+      margin-top: -5px;
+      margin-bottom: 2.5%;
+    }
+  }
+  .exif-data {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    h3 {
+      color: rgb(255, 0, 234);
+
+      span {
+        font-size: 1.1rem;
+        color: #555;
+      }
+    }
+
+    .resolution {
+      color: rgb(80, 114, 25);
+      list-style: none;
+      li {
+        padding: 5%;
+        cursor: pointer;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+}
 // Footer of page
 #footer {
   background: #333;
-  height: 65px;
+  height: 20px;
   .container {
     h4 {
       color: white;

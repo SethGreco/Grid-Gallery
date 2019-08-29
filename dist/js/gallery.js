@@ -20,11 +20,14 @@ async function gallery() {
 
     // <a> tag for name and links.
     var title = document.createElement("A");
-
+    var insertContent = "" + images[i].location + "";
     title.setAttribute("class", "tags");
     title.setAttribute("id", "img" + [i]);
-    title.setAttribute("href", "imageDisplay.html?id=" + images[i].model_pic);
-    var insertContent = "" + images[i].location + "";
+    title.setAttribute(
+      "href",
+      "imageDisplay.html?id=" + images[i].model_pic + "&loc=" + insertContent
+    );
+
     title.textContent = insertContent;
     // var insertContent = "<img src=" + '"' + images[i].model_pic + '"' + ">";
     // title.textContent = insertContent;

@@ -1,8 +1,10 @@
-document.getElementById("container-detail").addEventListener("load", loader());
+document.getElementById("block-a").addEventListener("load", loader());
 
 async function loader() {
   var singleImage = document.getElementById("img1");
   singleImage.setAttribute("src", getParameterByName("id"));
+  var usaState = document.getElementById("state-name");
+  usaState.textContent = getParameterByName("loc");
 }
 
 function getParameterByName(name, url) {
