@@ -8,13 +8,17 @@
     <title>Image</title>
   </head>
   <body>
+    <section id="header">Header</section>
+
     <section id="block-a">
       <div id="container-detail">
         <div class="exif-data">
-          <h4>Model: <span id="modelhtml"></span></h4>
-          <h4>F-Stop: <span id="fstophtml"></span></h4>
-          <h4>Exposure: <span id="exposurehtml"></span></h4>
-          <h4>ISO: <span id="isohtml"></span></h4>
+          <h3>Model: <span id="modelhtml"></span></h3>
+          <h3>Focal Length: <span id="focalhtml"></span></h3>
+          <h3>F-Stop: <span id="fstophtml"></span></h3>
+          <h3>Exposure: <span id="exposurehtml"></span></h3>
+          <h3>ISO: <span id="isohtml"></span></h3>
+          <h3>Date: <span id="datehtml"></span></h3>
           <br />
           <br />
           <ul class="resolution">
@@ -22,8 +26,19 @@
             <li onclick="changeSize(2)">Medium</li>
             <li onclick="changeSize(1)">Small</li>
           </ul>
+          <br />
+          <br />
+          <a href="index.html">Return Home</a>
         </div>
-        <img src="" id="img1" class="med-img" />
+        <div class="img-container">
+          <img src="" id="img1" class="med-img" />
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container">
+        <h4>Copyright &copy 2019, All rights reserved</h4>
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>

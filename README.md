@@ -19,3 +19,6 @@ All Photos are taken by me for this project.
 
 My second project using Sass, this time however with out the NPM package version.
 Installed with brew and ran with sass commands rather then package.json scripts.
+
+#EXIF-js
+EXIF library cdn is called to help extract and view the metadata of the photos. Many fields are avaiable to view but only using, Date taken, camera mdoel, aperture, focal length, exposure, & iso.

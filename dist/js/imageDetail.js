@@ -22,19 +22,25 @@ function getExif() {
   EXIF.getData(img1, function() {
     // Exif library calls
     var model = EXIF.getTag(this, "Model");
+    var focal = EXIF.getTag(this, "FocalLength");
     var exptime = EXIF.getTag(this, "ExposureTime");
     var fstop = EXIF.getTag(this, "FNumber");
     var iso = EXIF.getTag(this, "ISOSpeedRatings");
+    var date = EXIF.getTag(this, "DateTimeOriginal");
     // Grabbing the html elements from file
-    var Model = document.getElementById("modelhtml");
-    var FStop = document.getElementById("fstophtml");
-    var ExpTime = document.getElementById("exposurehtml");
+    var MODEL = document.getElementById("modelhtml");
+    var FOCAL = document.getElementById("focalhtml");
+    var FSTOP = document.getElementById("fstophtml");
+    var EXPTIME = document.getElementById("exposurehtml");
     var ISO = document.getElementById("isohtml");
+    var DATE = document.getElementById("datehtml");
     // setting the value in the html elements
-    Model.innerHTML = `${model}`;
-    FStop.innerHTML = `${fstop}`;
-    ExpTime.innerHTML = `${exptime}`;
+    MODEL.innerHTML = `${model}`;
+    FOCAL.innerHTML = `${focal}`;
+    FSTOP.innerHTML = `${fstop}`;
+    EXPTIME.innerHTML = `${exptime}`;
     ISO.innerHTML = `${iso}`;
+    DATE.innerHTML = `${date}`;
   });
 }
 
@@ -43,14 +49,11 @@ function changeSize(num) {
 
   if (num === 1) {
     imgRes.setAttribute("class", "small-img");
-    console.log("you printed 1");
   }
   if (num === 2) {
     imgRes.setAttribute("class", "med-img");
-    console.log("you printed 2");
   }
   if (num === 3) {
     imgRes.setAttribute("class", "large-img");
-    console.log("you printed 3");
   }
 }

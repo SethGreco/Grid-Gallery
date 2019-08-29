@@ -1,53 +1,88 @@
+// reset padding and margin defaults to 0
 * {
   padding: 0;
   margin: 0;
 }
 
+// Body of the entire page
 body {
-  background: black;
+  background: rgba(9, 16, 78, 0.287);
 }
 
-// Varying Resolution changes
+// Varying Resolution changes / selectors
 .small-img {
   width: 640px;
   height: 360px;
 }
 
 .med-img {
-  width: 1280px;
-  height: 720;
+  width: 1024px;
+  height: 640px;
 }
 
 .large-img {
-  width: 1440px;
-  height: 810px;
+  width: 1620px;
+  height: 1080px;
 }
+
+// Main header of page
+#header {
+  height: 7.5vh;
+  background-color: #333;
+}
+
+// Block a container EXIF and Iamge .. left to right
 #block-a {
   #container-detail {
-    position: relative;
-    top: 50px;
     display: flex;
 
     .exif-data {
-      h4 {
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      margin-top: 2.5%;
+      h3 {
         padding: 2.5%;
         color: rgb(255, 0, 234);
 
         span {
-          color: #e5e5e5;
+          font-size: 1.1rem;
+          color: #555;
         }
       }
 
       .resolution {
-        color: yellow;
+        color: rgb(80, 114, 25);
+        list-style: none;
         li {
           padding: 5%;
           cursor: pointer;
         }
       }
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
     }
-    img {
-      padding-left: 50px;
+    .img-container {
+      margin-right: 2.5%;
+      width: 1070px;
+      height: 680px;
+      background: #d3d3d3c7;
+      text-align: center;
+      #img1 {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// Footer of page
+#footer {
+  background: #333;
+  height: 65px;
+  .container {
+    h4 {
+      color: white;
     }
   }
 }
