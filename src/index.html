@@ -12,14 +12,24 @@
       <div class="container">
         <ul>
           <li>Home</li>
-          <li onclick="photoSort()">
+          <li>
             Sort
             <ul>
-              <li><a>California</a></li>
-              <li><a>California</a></li>
-              <li><a>California</a></li>
-              <li><a>California</a></li>
-              <li><a>California</a></li>
+              <li
+                onclick="photoSort(document.getElementById('CA').textContent)"
+              >
+                <a id="CA">California</a>
+              </li>
+              <li
+                onclick="photoSort(document.getElementById('CO').textContent)"
+              >
+                <a id="CO">Colorado</a>
+              </li>
+              <li
+                onclick="photoSort(document.getElementById('MT').textContent)"
+              >
+                <a id="MT">Montana</a>
+              </li>
             </ul>
           </li>
         </ul>

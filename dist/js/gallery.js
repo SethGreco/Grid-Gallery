@@ -1,6 +1,7 @@
 // call Django API and fetch photos
 document.getElementById("container-images").addEventListener("load", gallery());
 var images;
+
 async function gallery() {
   images = await getPhotos();
 
@@ -29,22 +30,14 @@ async function gallery() {
     );
 
     title.textContent = insertContent;
-    // var insertContent = "<img src=" + '"' + images[i].model_pic + '"' + ">";
-    // title.textContent = insertContent;
     document.getElementById("div" + [i]).appendChild(title);
   }
 }
 
-// function expandPhoto(click_id) {
-//   document.getElementById(click_id).setAttribute("class", "main");
-//   console.log(window.location.href);
-// }
-
 function photoSort(state) {
-  var sortedArr = [];
   for (i = 0; i < images.length; i++) {
     if (state === images[i].location) {
-      console.log(images[i]);
+      console.log(i);
     }
   }
 }

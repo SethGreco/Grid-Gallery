@@ -3,6 +3,14 @@
   margin: 0;
 }
 
+#appearance {
+  visibility: visible;
+}
+
+#disappearance {
+  visibility: collapse;
+}
+
 .main {
   height: 500px;
   width: 650px;
@@ -26,6 +34,7 @@
 }
 #navigation .container ul li:hover ul {
   display: list-item;
+  position: absolute;
 }
 
 #block-a .container {
