@@ -22,3 +22,8 @@ Installed with brew and ran with sass commands rather then package.json scripts.
 
 #EXIF-js
 EXIF library cdn is called to help extract and view the metadata of the photos. Many fields are avaiable to view but only using, Date taken, camera mdoel, aperture, focal length, exposure, & iso.
+
+#Jquery
+Ajax requests...
+
+#URL Parameter Passing

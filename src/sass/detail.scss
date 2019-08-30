@@ -7,6 +7,7 @@
 // Body of the entire page
 body {
   background: rgba(244, 245, 246, 0.767);
+  transition: background-color 2s ease-in-out;
 }
 
 // Varying Resolution changes / selectors
@@ -27,11 +28,41 @@ body {
 
 // Main header of page
 #header {
-  height: 2vh;
+  height: 4vh;
 }
 
 // Block a container EXIF and Iamge .. left to right
 #block-a {
+  // setting up an icon to hoverover for tooltip with colors to select from
+  #color-palette {
+    position: relative;
+
+    display: inline-block;
+
+    .tooltiptext {
+      margin-left: 20%;
+      position: absolute;
+      visibility: hidden;
+      width: 125px;
+      height: 125px;
+      background-color: #333;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2px;
+
+      .do {
+        height: 35px;
+        width: 35px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  #color-palette:hover {
+    .tooltiptext {
+      visibility: visible;
+    }
+  }
   .img-container {
     text-align: center;
   }

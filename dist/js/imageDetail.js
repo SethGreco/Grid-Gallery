@@ -59,3 +59,19 @@ function changeSize(num) {
     imgRes.setAttribute("class", "large-img");
   }
 }
+
+function func(x) {
+  var background = document.getElementById("body");
+
+  if (x === 1) {
+    background.style.backgroundColor = "black";
+  } else if (x === 2) {
+    background.style.backgroundColor = "blue";
+  } else if (x === 3) {
+    background.style.backgroundColor = "red";
+  } else if (x === 4) {
+    background.style.backgroundColor = "orange";
+  } else if (x === 5) {
+    background.style.backgroundColor = "green";
+  } else background.style.backgroundColor = "rgba(244, 245, 246, 0.767)";
+}

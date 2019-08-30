@@ -5,6 +5,7 @@
 
 body {
   background: rgba(244, 245, 246, 0.767);
+  transition: background-color 2s ease-in-out;
 }
 
 .small-img {
@@ -23,9 +24,32 @@ body {
 }
 
 #header {
-  height: 2vh;
+  height: 4vh;
 }
 
+#block-a #color-palette {
+  position: relative;
+  display: inline-block;
+}
+#block-a #color-palette .tooltiptext {
+  margin-left: 20%;
+  position: absolute;
+  visibility: hidden;
+  width: 125px;
+  height: 125px;
+  background-color: #333;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+}
+#block-a #color-palette .tooltiptext .do {
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+}
+#block-a #color-palette:hover .tooltiptext {
+  visibility: visible;
+}
 #block-a .img-container {
   text-align: center;
 }
